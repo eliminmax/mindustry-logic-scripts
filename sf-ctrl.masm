@@ -1,0 +1,71 @@
+set CORE nucleus1
+set CUTOFF 10000
+sensor OVERRIDE switch1 @enabled
+sensor __tmp4 CORE @copper
+op greaterThanEq __tmp5 __tmp4 CUTOFF
+op land __tmp6 __tmp5 OVERRIDE
+control enabled conveyor1 __tmp6 0 0 0
+sensor __tmp7 CORE @lead
+op greaterThanEq __tmp8 __tmp7 CUTOFF
+op land __tmp9 __tmp8 OVERRIDE
+control enabled conveyor2 __tmp9 0 0 0
+sensor __tmp10 CORE @metaglass
+op greaterThanEq __tmp11 __tmp10 CUTOFF
+op land __tmp12 __tmp11 OVERRIDE
+control enabled conveyor3 __tmp12 0 0 0
+sensor __tmp13 CORE @graphite
+op greaterThanEq __tmp14 __tmp13 CUTOFF
+op land __tmp15 __tmp14 OVERRIDE
+control enabled conveyor4 __tmp15 0 0 0
+sensor __tmp16 CORE @sand
+op greaterThanEq __tmp17 __tmp16 CUTOFF
+op land __tmp18 __tmp17 OVERRIDE
+control enabled conveyor5 __tmp18 0 0 0
+sensor __tmp19 CORE @coal
+op greaterThanEq __tmp20 __tmp19 CUTOFF
+op land __tmp21 __tmp20 OVERRIDE
+control enabled conveyor6 __tmp21 0 0 0
+sensor __tmp22 CORE @titanium
+op greaterThanEq __tmp23 __tmp22 CUTOFF
+op land __tmp24 __tmp23 OVERRIDE
+control enabled conveyor7 __tmp24 0 0 0
+sensor __tmp25 CORE @thorium
+op greaterThanEq __tmp26 __tmp25 CUTOFF
+op land __tmp27 __tmp26 OVERRIDE
+control enabled conveyor8 __tmp27 0 0 0
+sensor __tmp28 CORE @scrap
+op greaterThanEq __tmp29 __tmp28 CUTOFF
+op land __tmp30 __tmp29 OVERRIDE
+control enabled conveyor9 __tmp30 0 0 0
+sensor __tmp31 CORE @silicon
+op greaterThanEq __tmp32 __tmp31 CUTOFF
+op land __tmp33 __tmp32 OVERRIDE
+control enabled conveyor10 __tmp33 0 0 0
+sensor __tmp34 CORE @plastanium
+op greaterThanEq __tmp35 __tmp34 CUTOFF
+op land __tmp36 __tmp35 OVERRIDE
+control enabled conveyor11 __tmp36 0 0 0
+sensor __tmp37 CORE @phase-fabric
+op greaterThanEq __tmp38 __tmp37 CUTOFF
+op land __tmp39 __tmp38 OVERRIDE
+control enabled conveyor12 __tmp39 0 0 0
+sensor __tmp40 CORE @surge-alloy
+op greaterThanEq __tmp41 __tmp40 CUTOFF
+op land __tmp42 __tmp41 OVERRIDE
+control enabled conveyor13 __tmp42 0 0 0
+sensor __tmp43 CORE @spore-pod
+op greaterThanEq __tmp44 __tmp43 CUTOFF
+op land __tmp45 __tmp44 OVERRIDE
+control enabled conveyor14 __tmp45 0 0 0
+sensor __tmp46 CORE @blast-compound
+op greaterThanEq __tmp47 __tmp46 CUTOFF
+op land __tmp48 __tmp47 OVERRIDE
+control enabled conveyor15 __tmp48 0 0 0
+sensor __tmp49 CORE @pyratite
+op greaterThanEq __tmp50 __tmp49 CUTOFF
+op land __tmp51 __tmp50 OVERRIDE
+control enabled conveyor16 __tmp51 0 0 0
+sensor __tmp52 CORE @revision-snowball
+op greaterThanEq __tmp53 __tmp52 CUTOFF
+op land __tmp54 __tmp53 OVERRIDE
+control enabled conveyor17 __tmp54 0 0 0

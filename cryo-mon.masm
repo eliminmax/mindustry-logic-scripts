@@ -1,0 +1,12 @@
+op add graphX graphX 1
+sensor cryo tank1 @cryofluid
+sensor maxCryo tank1 @liquidCapacity
+op div cryoRatio cryo maxCryo
+op mul cryoGraphY cryoRatio 80
+draw color 63 63 63 255 0 0
+draw line graphX 0 graphX 81 0 0
+draw color 0 255 255 255 0 0
+draw line graphX cryoGraphY graphX 1 0 0
+drawflush display1
+op mod graphX graphX 80
+

@@ -1,0 +1,51 @@
+# made with mindcode (mindcode.herokuapp.com), then hand-optimized
+set CORE nucleus1
+sensor copCount CORE @copper
+print "COPP: "
+print copCount
+sensor leadCount CORE @lead
+print "\nLEAD: "
+print leadCount
+sensor glassCount CORE @metaglass
+print "\nMETA: "
+print glassCount
+sensor graphCount CORE @graphite
+print "\nGRAP: "
+print graphCount
+sensor sandCount CORE @sand
+print "\nSAND: "
+print sandCount
+sensor coalCount CORE @coal
+print "\nCOAL: "
+print coalCount
+sensor titaCount CORE @titanium
+print "\nTITA: "
+print titaCount
+sensor thorCount CORE @thorium
+print "\nTHOR "
+print thorCount
+sensor scrapCount CORE @scrap
+print "\nSCRA: "
+print scrapCount
+sensor siliCount CORE @silicon
+print "\nSILI: "
+print siliCount
+sensor plastCount CORE @plastanium
+print "\nPLAS: "
+print plastCount
+sensor phaseCount CORE @phase-fabric
+print "\nPHAS: "
+print phaseCount
+sensor surgeCount CORE @surge-alloy
+print "\nSURG: "
+print surgeCount
+sensor sporeCount CORE @spore-pod
+print "\nSPOR: "
+print sporeCount
+sensor blastCount CORE @blast-compound
+print "\nBLAS: "
+print blastCount
+sensor pyraCount CORE @pyratite
+print "\nPYRA: "
+print pyraCount
+printflush message1

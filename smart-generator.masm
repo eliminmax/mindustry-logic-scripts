@@ -1,0 +1,10 @@
+sensor max_power battery1 @powerNetCapacity
+sensor current_power battery1 @powerNetStored
+sensor previous_state switch1 @enabled
+op div half_max max_power 2
+op lessThan less_than_half current_power half_max
+op lessThan less_than_max current_power max_power
+op or pre_new_state previous_state less_than_half
+op land new_state pre_new_state less_than_max
+control enabled switch1 new_state 0 0 0
+control enabled generator1 new_state 0 0 0
