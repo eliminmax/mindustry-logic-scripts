@@ -1,0 +1,44 @@
+sensor vx vault1 @x
+sensor vy vault1 @y
+sensor cx nucleus1 @x
+sensor cy nucleus1 @y
+set minItemCount 900
+sensor siliCount vault1 @silicon
+jump 24 lessThan siliCount minItemCount
+sensor leadCount vault1 @lead
+jump 22 lessThan leadCount minItemCount
+sensor grapCount vault1 @graphite
+jump 20 lessThan grapCount minItemCount
+sensor titaCount vault1 @titanium
+jump 18 lessThan titaCount minItemCount
+sensor metaCount vault1 @metaglass
+jump 16 lessThan metaCount minItemCount
+jump 35 always @this false
+set grabItem @metaglass
+jump 25 always @this false
+set grabItem @titanium
+jump 25 always @this false
+set grabItem @graphite
+jump 25 always @this false
+set grabItem @lead
+jump 25 always @this false
+set grabItem @silicon
+ubind @flare
+sensor itemCount @unit @totalItems
+sensor currentItem @unit @firstItem
+jump 36 notEqual currentItem grabItem
+jump 36 equal itemCount 0
+ucontrol move vx vy 0 0 0
+ucontrol within vx vy 2 vInRange 0
+jump 5 equal vInRange false
+ucontrol itemDrop vault1 2000 0 0 0
+jump 5 always vault1 false
+ubind @flare
+ucontrol move cx cy 0 0 0
+ucontrol within cx cy 3 cInRange 0
+jump 5 equal cInRange false
+sensor currentItem @unit @firstItem
+jump 42 equal currentItem grabItem
+ucontrol itemDrop nucleus1 2000 0 0 0
+ucontrol itemTake nucleus1 grabItem 2000 0 0
+jump 5 always vault1 false
