@@ -1,0 +1,25 @@
+ubind @flare
+sensor item_count @unit @totalItems
+jump 6 equal item_count 0
+ucontrol approach 352 127 2 0 0
+ucontrol itemDrop reconstructor1 1000 0 0 0
+jump 0 always item_count 0
+ucontrol approach 356 112 2 0 0
+sensor item_count @unit @totalItems
+sensor sil reconstructor1 @silicon
+sensor pla reconstructor1 @plastanium
+sensor sur reconstructor1 @surge-alloy
+sensor pha reconstructor1 @phase-fabric
+jump 16 lessThan sil 1000
+jump 18 lessThan pla 600
+jump 20 lessThan sur 500
+jump 22 lessThan pha 350
+set _i @silicon
+jump 23 always sil false
+set _i @plastanium
+jump 23 always sil false
+set _i @surge-alloy
+jump 23 always sil false
+set _i @phase-fabric
+ucontrol itemTake nucleus1 _i 1000 0 0
+sensor item_count @unit @totalItems
