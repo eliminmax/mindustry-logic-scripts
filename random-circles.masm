@@ -1,0 +1,12 @@
+set disp-size 176
+op rand r 255 b
+op rand g 255 b
+op rand b 255 b
+op div max-radius disp-size 4
+op rand radius max-radius b
+op rand x disp-size b
+op rand y disp-size b
+draw stroke 0 0 0 0 0 0
+draw color r g b 255 0 0
+draw poly x y 127 radius 0 0
+drawflush display1
