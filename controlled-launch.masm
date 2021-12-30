@@ -1,0 +1,93 @@
+sensor forceShutoff switch1 @enabled
+sensor forceEnable switch2 @enabled
+jump 56 notEqual forceShutoff false
+jump 75 notEqual forceEnable false
+set threshhold 21000
+sensor copperCount nucleus1 @copper
+op greaterThanEq copperEnable copperCount threshhold
+control enabled conveyor1 copperEnable 0 0 0
+sensor leadCount nucleus1 @lead
+op greaterThanEq leadEnable leadCount threshhold
+control enabled conveyor2 leadEnable 0 0 0
+sensor metaglassCount nucleus1 @metaglass
+op greaterThanEq metaglassEnable metaglassCount threshhold
+control enabled conveyor3 metaglassEnable 0 0 0
+sensor graphiteCount nucleus1 @graphite
+op greaterThanEq graphiteEnable graphiteCount threshhold
+control enabled conveyor4 graphiteEnable 0 0 0
+sensor sandCount nucleus1 @sand
+op greaterThanEq sandEnable sandCount threshhold
+control enabled conveyor5 sandEnable 0 0 0
+sensor coalCount nucleus1 @coal
+op greaterThanEq coalEnable coalCount threshhold
+control enabled conveyor6 coalEnable 0 0 0
+sensor titaniumCount nucleus1 @titanium
+op greaterThanEq titaniumEnable titaniumCount threshhold
+control enabled conveyor7 titaniumEnable 0 0 0
+sensor thoriumCount nucleus1 @thorium
+op greaterThanEq thoriumEnable thoriumCount threshhold
+control enabled conveyor8 thoriumEnable 0 0 0
+sensor scrapCount nucleus1 @scrap
+op greaterThanEq scrapEnable scrapCount threshhold
+control enabled conveyor9 scrapEnable 0 0 0
+sensor siliconCount nucleus1 @silicon
+op greaterThanEq siliconEnable siliconCount threshhold
+control enabled conveyor10 siliconEnable 0 0 0
+sensor plastaniumCount nucleus1 @plastanium
+op greaterThanEq plastaniumEnable plastaniumCount threshhold
+control enabled conveyor11 plastaniumEnable 0 0 0
+sensor phase-fabricCount nucleus1 @phase-fabric
+op greaterThanEq phase-fabricEnable phase-fabricCount threshhold
+control enabled conveyor12 phase-fabricEnable 0 0 0
+sensor surge-alloyCount nucleus1 @surge-alloy
+op greaterThanEq surge-alloyEnable surge-alloyCount threshhold
+control enabled conveyor13 surge-alloyEnable 0 0 0
+sensor spore-podCount nucleus1 @spore-pod
+op greaterThanEq spore-podEnable spore-podCount threshhold
+control enabled conveyor14 spore-podEnable 0 0 0
+sensor blast-compoundCount nucleus1 @blast-compound
+op greaterThanEq blast-compoundEnable blast-compoundCount threshhold
+control enabled conveyor15 blast-compoundEnable 0 0 0
+sensor pyratiteCount nucleus1 @pyratite
+op greaterThanEq pyratiteEnable pyratiteCount threshhold
+control enabled conveyor16 pyratiteEnable 0 0 0
+print "Normal Operation"
+printflush message1
+end
+control enabled conveyor1 0 0 0 0
+control enabled conveyor2 0 0 0 0
+control enabled conveyor3 0 0 0 0
+control enabled conveyor4 0 0 0 0
+control enabled conveyor5 0 0 0 0
+control enabled conveyor6 0 0 0 0
+control enabled conveyor7 0 0 0 0
+control enabled conveyor8 0 0 0 0
+control enabled conveyor9 0 0 0 0
+control enabled conveyor10 0 0 0 0
+control enabled conveyor11 0 0 0 0
+control enabled conveyor12 0 0 0 0
+control enabled conveyor13 0 0 0 0
+control enabled conveyor14 0 0 0 0
+control enabled conveyor15 0 0 0 0
+control enabled conveyor16 0 0 0 0
+print "Forcibly Disabled"
+printflush message1
+end
+control enabled conveyor1 1 0 0 0
+control enabled conveyor2 1 0 0 0
+control enabled conveyor3 1 0 0 0
+control enabled conveyor4 1 0 0 0
+control enabled conveyor5 1 0 0 0
+control enabled conveyor6 1 0 0 0
+control enabled conveyor7 1 0 0 0
+control enabled conveyor8 1 0 0 0
+control enabled conveyor9 1 0 0 0
+control enabled conveyor10 1 0 0 0
+control enabled conveyor11 1 0 0 0
+control enabled conveyor12 1 0 0 0
+control enabled conveyor13 1 0 0 0
+control enabled conveyor14 1 0 0 0
+control enabled conveyor15 1 0 0 0
+control enabled conveyor16 1 0 0 0
+print "Forcibly Enabled"
+printflush message1
