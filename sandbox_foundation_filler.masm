@@ -1,70 +1,72 @@
 sensor max_items foundation1 @itemCapacity
 sensor copper_count foundation1 @copper
-jump 35 lessThan copper_count max_items
+jump 37 lessThan copper_count max_items
 sensor lead_count foundation1 @lead
-jump 37 lessThan lead_count max_items
+jump 39 lessThan lead_count max_items
 sensor metaglass_count foundation1 @metaglass
-jump 39 lessThan metaglass_count max_items
+jump 41 lessThan metaglass_count max_items
 sensor graphite_count foundation1 @graphite
-jump 41 lessThan graphite_count max_items
+jump 43 lessThan graphite_count max_items
 sensor sand_count foundation1 @sand
-jump 43 lessThan sand_count max_items
+jump 45 lessThan sand_count max_items
 sensor coal_count foundation1 @coal
-jump 45 lessThan coal_count max_items
+jump 47 lessThan coal_count max_items
 sensor titanium_count foundation1 @titanium
-jump 47 lessThan titanium_count max_items
+jump 49 lessThan titanium_count max_items
 sensor thorium_count foundation1 @thorium
-jump 49 lessThan thorium_count max_items
+jump 51 lessThan thorium_count max_items
 sensor scrap_count foundation1 @scrap
-jump 51 lessThan scrap_count max_items
+jump 53 lessThan scrap_count max_items
 sensor silicon_count foundation1 @silicon
-jump 53 lessThan silicon_count max_items
+jump 55 lessThan silicon_count max_items
 sensor plastanium_count foundation1 @plastanium
-jump 55 lessThan plastanium_count max_items
+jump 57 lessThan plastanium_count max_items
 sensor phase-fabric_count foundation1 @phase-fabric
-jump 57 lessThan phase-fabric_count max_items
+jump 59 lessThan phase-fabric_count max_items
 sensor surge-alloy_count foundation1 @surge-alloy
-jump 59 lessThan surge-alloy_count max_items
+jump 61 lessThan surge-alloy_count max_items
 sensor spore-pod_count foundation1 @spore-pod
-jump 61 lessThan spore-pod_count max_items
+jump 63 lessThan spore-pod_count max_items
 sensor blast-compound_count foundation1 @blast-compound
-jump 63 lessThan blast-compound_count max_items
+jump 65 lessThan blast-compound_count max_items
 sensor pyratite_count foundation1 @pyratite
-jump 65 lessThan pyratite_count max_items
+jump 67 lessThan pyratite_count max_items
 sensor revision-snowball_count foundation1 @revision-snowball
-jump 67 lessThan revision-snowball_count max_items
+jump 69 lessThan revision-snowball_count max_items
+set current_item none
+jump 70 always 0 0
 set current_item @copper
-jump 68 always 0 0
+jump 70 always 0 0
 set current_item @lead
-jump 68 always 0 0
+jump 70 always 0 0
 set current_item @metaglass
-jump 68 always 0 0
+jump 70 always 0 0
 set current_item @graphite
-jump 68 always 0 0
+jump 70 always 0 0
 set current_item @sand
-jump 68 always 0 0
+jump 70 always 0 0
 set current_item @coal
-jump 68 always 0 0
+jump 70 always 0 0
 set current_item @titanium
-jump 68 always 0 0
+jump 70 always 0 0
 set current_item @thorium
-jump 68 always 0 0
+jump 70 always 0 0
 set current_item @scrap
-jump 68 always 0 0
+jump 70 always 0 0
 set current_item @silicon
-jump 68 always 0 0
+jump 70 always 0 0
 set current_item @plastanium
-jump 68 always 0 0
+jump 70 always 0 0
 set current_item @phase-fabric
-jump 68 always 0 0
+jump 70 always 0 0
 set current_item @surge-alloy
-jump 68 always 0 0
+jump 70 always 0 0
 set current_item @spore-pod
-jump 68 always 0 0
+jump 70 always 0 0
 set current_item @blast-compound
-jump 68 always 0 0
+jump 70 always 0 0
 set current_item @pyratite
-jump 68 always 0 0
+jump 70 always 0 0
 set current_item @revision-snowball
 control config source1 current_item 0 0 0
 control config source2 current_item 0 0 0
