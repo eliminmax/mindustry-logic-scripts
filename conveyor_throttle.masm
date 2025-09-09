@@ -1,0 +1,3 @@
+sensor items conveyor2 @totalItems
+op strictEqual enable items 0
+control enabled conveyor1 enable 0 0 0
