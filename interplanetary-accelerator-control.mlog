@@ -1,0 +1,26 @@
+# compiled from Mindcode: http://mindcode.herokuapp.com/
+# had to then remove colon from `:accelerator1` due to Mindcode issue 286:
+
+# https://github.com/cardillan/mindcode/issues/286
+
+# ---
+# accelerator1.enabled = switch1.enabled
+#     && accelerator1.@copper == 8000
+#     && accelerator1.@lead == 8000
+#     && accelerator1.@thorium == 4000
+#     && accelerator1.@silicon == 5000;
+
+sensor *tmp3 accelerator1 @copper
+op equal *tmp4 *tmp3 8000
+sensor *tmp2 switch1 @enabled
+op land *tmp5 *tmp2 *tmp4
+sensor *tmp6 accelerator1 @lead
+op equal *tmp7 *tmp6 8000
+op land *tmp8 *tmp5 *tmp7
+sensor *tmp9 accelerator1 @thorium
+op equal *tmp10 *tmp9 4000
+op land *tmp11 *tmp8 *tmp10
+sensor *tmp12 accelerator1 @silicon
+op equal *tmp13 *tmp12 5000
+op land *tmp14 *tmp11 *tmp13
+control enabled accelerator1 *tmp14 0 0 0
