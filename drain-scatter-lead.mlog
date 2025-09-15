@@ -1,0 +1,10 @@
+# I wanted to drain lead from a scatter and replace with metaglass, but it had
+# a belt of lead feeding into it. Wrote this to drain it while it had lead and
+# there were no fliers nearby. Keeping it around for future reference.
+radar enemy flying any distance scatter1 1 flyer
+jump 4 strictEqual flyer null
+control shootp scatter1 flyer flyer 0 0
+end
+sensor ammo scatter1 @currentAmmoType
+op strictEqual islead ammo @lead
+control shoot scatter1 0 0 islead 0
