@@ -1,0 +1,24 @@
+# Connect to a power node and a message block to get statistics on the
+# power network.
+
+sensor stored node1 @powerNetStored
+sensor cap node1 @powerNetCapacity
+op sub unfilled cap stored
+op div ratio stored cap
+# convert ratio into a percent rounded to the hundreds place by multiplying by
+# 10000, rounding, then dividing by 100.
+op mul pre_percent ratio 10000
+op round pre_percent pre_percent 0
+op div percent pre_percent 100
+# keep text box aligned as numbers change while looking fancy
+print "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+print "\nNetwork Battery Info\n"
+print "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+print "\nstored: {0}\ncapacity: {1}\nunfilled capcacity: {2}\n"
+print "percent filled: {3}%\n"
+print "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@"
+format stored
+format cap
+format unfilled
+format percent
+printflush message1
