@@ -1,12 +1,16 @@
+# default to size of large logic display
 set disp-size 176
-op rand r 255 b
-op rand g 255 b
-op rand b 255 b
 op div max-radius disp-size 4
-op rand radius max-radius b
-op rand x disp-size b
-op rand y disp-size b
-draw stroke 0 0 0 0 0 0
-draw color r g b 255 0 0
-draw poly x y 127 radius 0 0
-drawflush display1
+draw clear 255 255 255 0 0 0
+main_loop:
+    op rand r 255 0
+    op rand g 255 0
+    op rand b 255 0
+    op rand radius max-radius 0
+    op rand x disp-size 0
+    op rand y disp-size 0
+    draw stroke 0 0 0 0 0 0
+    draw color r g b 255 0 0
+    draw poly x y 127 radius 0 0
+    drawflush display1
+jump main_loop always 0 0
