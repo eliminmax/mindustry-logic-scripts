@@ -1,4 +1,4 @@
-## This program creates a graph charting the amount of cryofluid, water, oil, titanium, and blast compound stored in various containers, creating a visual indicator if there's a problem that could shut down your impact reactor(s).
+## This program creates a graph charting the amount of cryofluid, water, titanium, and blast compound stored in various containers, creating a visual indicator if there's a problem that could shut down your impact reactor(s).
 op add graphX graphX 1
 sensor cryo tank1 @cryofluid
 op div cryoGraphY cryo 18.5
@@ -11,22 +11,22 @@ op div titaGraphY tita 3.75
 draw color 63 63 63 255 0 0
 draw line graphX 0 graphX 81 0 0
 draw color 0 255 255 255 0 0
-draw poly graphX cryoGraphY 255 1 0 0
+draw line graphX cryoGraphY graphX 1 0 0
 drawflush display1
 draw color 63 63 63 255 0 0
 draw line graphX 0 graphX 81 0 0
 draw color 0 0 255 255 0 0
-draw poly graphX waterGraphY 255 1 0 0
+draw line graphX waterGraphY graphX 1 0 0
 drawflush display2
 draw color 63 63 63 255 0 0
 draw line graphX 0 graphX 81 0 0
 draw color 255 0 0 255 0 0
-draw poly graphX blastGraphY 255 1 0 0
+draw line graphX blastGraphY graphX 1 0 0
 drawflush display3
 draw color 63 63 63 255 0 0
 draw line graphX 0 graphX 81 0 0
 draw color 191 255 255 255 0 0
-draw poly graphX titaGraphY 255 1 0 0
+draw line graphX titaGraphY graphX 1 0 0
 drawflush display4
 op mod graphX graphX 80
 
