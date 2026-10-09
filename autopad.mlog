@@ -1,0 +1,34 @@
+sensor mg nucleus1 @metaglass
+sensor gr nucleus1 @graphite
+sensor ti nucleus1 @titanium
+sensor th nucleus1 @thorium
+sensor sc nucleus1 @scrap
+sensor si nucleus1 @silicon
+sensor pl nucleus1 @plastanium
+sensor pf nucleus1 @phase-fabric
+sensor sa nucleus1 @surge-alloy
+sensor sp nucleus1 @spore-pod
+sensor bc nucleus1 @blast-compound
+sensor py nucleus1 @pyratite
+select config.a lessThan mg gr @metaglass @graphite
+op min counts.a mg gr
+select config.b lessThan ti th @titanium @thorium
+op min counts.b ti th
+select config.c lessThan sc si @scrap @silicon
+op min counts.c sc si
+select config.d lessThan pl pf @plastanium @phase-fabric
+op min counts.d pl pf
+select config.e lessThan sa sp @surge-alloy @spore-pod
+op min counts.e sa sp
+select config.f lessThan bc py @blast-compound @pyratite
+op min counts.f bc py
+select config.ab lessThan counts.a counts.b config.a config.b
+op min counts.ab counts.a counts.b
+select config.cd lessThan counts.c counts.d config.c config.d
+op min counts.cd counts.c counts.d
+select config.ef lessThan counts.e counts.f config.e config.f
+op min counts.ef counts.e counts.f
+select config.abcd lessThan counts.ab counts.cd config.ab config.cd
+op min counts.abcd counts.ab counts.cd
+select config lessThan counts.abcd counts.ef config.abcd config.ef
+control config pad1 config 0 0 0
