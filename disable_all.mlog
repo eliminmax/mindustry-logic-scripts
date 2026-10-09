@@ -1,0 +1,6 @@
+set i 0
+getlink l i
+jump 0 strictEqual l null
+op add i i 1
+control enabled l 0 0 0 0
+jump 1 always x false
