@@ -1,0 +1,12 @@
+print "target: {0}, {1}"
+format x
+format y
+printflush message1
+sensor x_inc switch1 @enabled
+sensor x_dec switch2 @enabled
+sensor y_inc switch3 @enabled
+sensor y_dec switch4 @enabled
+op add x x x_inc
+op sub x x x_dec
+op add y y y_inc
+op sub y y y_dec
