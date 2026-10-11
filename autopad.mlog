@@ -1,34 +1,34 @@
-sensor mg nucleus1 @metaglass
-sensor gr nucleus1 @graphite
 sensor ti nucleus1 @titanium
 sensor th nucleus1 @thorium
+select config lessThanEq ti th @titanium @thorium
+op min low ti th
+sensor mg nucleus1 @metaglass
+select config lessThanEq low mg config @metaglass
+op min low low mg
+sensor gr nucleus1 @graphite
+select config lessThanEq low gr config @graphite
+op min low low gr
 sensor sc nucleus1 @scrap
+select config lessThanEq low sc config @scrap
+op min low low sc
 sensor si nucleus1 @silicon
+select config lessThanEq low si config @silicon
+op min low low si
 sensor pl nucleus1 @plastanium
+select config lessThanEq low pl config @plastanium
+op min low low pl
 sensor pf nucleus1 @phase-fabric
+select config lessThanEq low pf config @phase-fabric
+op min low low pf
 sensor sa nucleus1 @surge-alloy
+select config lessThanEq low sa config @surge-alloy
+op min low low sa
 sensor sp nucleus1 @spore-pod
+select config lessThanEq low sp config @spore-pod
+op min low low sp
 sensor bc nucleus1 @blast-compound
+select config lessThanEq low bc config @blast-compound
+op min low low bc
 sensor py nucleus1 @pyratite
-select config.a lessThanEq mg gr @metaglass @graphite
-op min counts.a mg gr
-select config.b lessThanEq ti th @titanium @thorium
-op min counts.b ti th
-select config.c lessThanEq sc si @scrap @silicon
-op min counts.c sc si
-select config.d lessThanEq pl pf @plastanium @phase-fabric
-op min counts.d pl pf
-select config.e lessThanEq sa sp @surge-alloy @spore-pod
-op min counts.e sa sp
-select config.f lessThanEq bc py @blast-compound @pyratite
-op min counts.f bc py
-select config.ab lessThanEq counts.a counts.b config.a config.b
-op min counts.ab counts.a counts.b
-select config.cd lessThanEq counts.c counts.d config.c config.d
-op min counts.cd counts.c counts.d
-select config.ef lessThanEq counts.e counts.f config.e config.f
-op min counts.ef counts.e counts.f
-select config.abcd lessThanEq counts.ab counts.cd config.ab config.cd
-op min counts.abcd counts.ab counts.cd
-select config lessThanEq counts.abcd counts.ef config.abcd config.ef
+select config lessThanEq low py config @pyratite
 control config pad1 config 0 0 0
