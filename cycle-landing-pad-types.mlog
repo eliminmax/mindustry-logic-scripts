@@ -1,0 +1,6 @@
+control config pad1 @thorium 0 0 0
+sensor i conveyor1 @thorium
+jump 1 lessThan i 1
+control config pad1 @silicon 0 0 0
+sensor i conveyor1 @silicon
+jump 4 lessThan i 1
